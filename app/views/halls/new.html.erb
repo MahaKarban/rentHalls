@@ -1,0 +1,23 @@
+<h1>Halls#new</h1>
+<p>Find me in app/views/halls/new.html.erb</p>
+<%= form_for @hall, url:{action:"create"} do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.label :image %>
+    <%= f.number_field :image%>
+
+    <%= f.label :area %>
+    <%= f.number_field :area%>
+
+    <%= f.label :services %>
+    <%= f.number_field :services%>
+
+    <%= f.label :price %>
+    <%= f.number_field :price%>
+
+    <%= f.submit "Create" %>
+<% end%>

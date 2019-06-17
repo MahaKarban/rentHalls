@@ -1,0 +1,9 @@
+<h1>index page</h1>
+<h4><%= link_to "create a hall", new_hall_path %>
+<% @halls.each do |hall| %>
+    
+    <h2><%= hall.name %> <%= hall.location %> <%= hall.image %> <%= hall.area %>  <%= hall.services %>  <%= hall.price %></h2>
+  
+    <h4><%= link_to "Show",hall_path(hall)%> <%= link_to "Edit", edit_hall_path(hall)%> <%= link_to "Delete", delete_hall_path(hall), method: :delete%></h4> 
+    
+<%end%>
